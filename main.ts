@@ -8,7 +8,7 @@ import { schema } from "./schema.ts";
 import { resolvers } from "./resolvers.ts";
 
 const MONGO_URL =
-  "mongodb+srv://jcondeh:mypassword123@cluster.ukvoi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
+  Deno.env.get("MONGO_URL") ;
 if (!MONGO_URL) {
   console.error("MONGO URL API KEY NOT WORKING");
   Deno.exit(1);
